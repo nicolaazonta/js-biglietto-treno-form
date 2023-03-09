@@ -10,24 +10,79 @@
 </head>
 <body>
 
-    <input id="name_surname" type="text">
-    <label for="name_surname">Nome e Cognome</label>
+    <main>
 
+        <div class="container d-flex flex-column justify-content-center align-content-center">
+            <div class="row w-100">
+                <div class="col-12">
+                    <div class="card border-2 bg-black p-2 m-5 ">
+                        <div class="row"><!-- inputs -->
+                            <h3 class="text-center pt-3 pb-5">INSERISCI I DATI PER CALCOLARE IL TUO BIGLIETTO</h3>
+                            <div class="col-4 d-flex justify-content-center align-content-center p-2">
+                                <input id="name_surname" type="text">
+                                <label class="lh-lg p-1" for="name_surname">Nome e Cognome</label>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-content-center p-2">
+                                <input id="km" type="number">
+                                <label class="lh-lg p-1" for="km">Km da percorrere</label>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-content-center p-2">
+                                <select id="age" class="form-select w-75" aria-label="Default select example">
+                                    <option selected>seleziona la fascia di età</option>
+                                    <option value="under">under 18</option>
+                                    <option value="middle">tra i 18 e i 65</option>
+                                    <option value="over">over 65</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-4 pb-3"><!-- buttons -->
+                                <button class="my-2 mx-3 d-inline-block w-25" id="mybtn">PIGIA QUI</button>                               
+                                <button class="my-2 mx-3 d-inline-block w-25" id="mybtn">RESET</button>                               
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row w-100">
+                <div class="col-12">
+                    <div class="card border-2 bg-black p-2 m-5 ">
+                        <div class="row"><!-- inputs -->
+                            <h3 class="text-center pt-3 pb-5">IL TUO BIGLIETTO</h3>
+                            <div class="col  px-5">
+                                <h4 class="pb-4">Nome Passeggero</h4>
+                                <h5 id="passenger"></h5>
+                            </div>
+                            <div class="col">
+                                <h6 class="pt-2 pb-4">Offerta</h6>
+                                <p id="ticket_type" class="text-opacity-50"></p>
+                            </div>
+                            <div class="col">
+                                <h6 class="pt-2 pb-4">Carrozza</h6>
+                                <p id="carrozza" class="text-opacity-50"></p>
+                            </div>
+                            <div class="col">
+                                <h6 class="pt-2 pb-4">Codice CP</h6>
+                                <p id="codice_cp" class="text-opacity-50"></p>
+                            </div>
+                            <div class="col">
+                                <h6 class="pt-2 pb-4">Costo biglietto</h6>
+                                <p id="total_price" class="text-opacity-50"></p>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+
+
+
+
+        <h2 id="price"></h2>
     
-    <input id="km" type="number">
-    <label for="km">Km da percorrere</label>
-
-    <select id="age" class="form-select" aria-label="Default select example">
-        <option selected>seleziona la fascia di età</option>
-        <option value="under">under 18</option>
-        <option value="middle">tra i 18 e i 65</option>
-        <option value="over">over 65</option>
-      </select>
-
-    <button id="mybtn">PIGIA QUI</button>
-
-    <h2 id="price"></h2>
-    
+    </main>
 
     <script src="./assets/js/main.js"></script>
 </body>

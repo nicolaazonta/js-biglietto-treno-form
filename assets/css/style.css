@@ -1,0 +1,7 @@
+main{
+    background-color: rgb(62, 29, 62);
+    color: rgb(164, 192, 94);
+}
+.dashed{
+    border: 1px dashed rgb(164, 192, 94);
+}

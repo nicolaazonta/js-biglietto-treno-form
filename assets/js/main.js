@@ -8,6 +8,9 @@
 
 const buttonEl = document.getElementById('mybtn');
 let price ;
+let discount = 1 ;
+let ticketType;
+
 /* const passengerNameSurname;
 const passengerKm;
 const passengerAge; */
@@ -28,16 +31,45 @@ buttonEl.addEventListener(
 
         if (passengerAge == 'under')
         {
-            console.log('sconto 20');
+            //console.log('sconto 20');
+            discount = .8;
+            ticketType='sconto del 20%';
         }
         else if(passengerAge == 'over')
         {
-            console.log('sconto 40');            
+            console.log('sconto 40');  
+            discount = .6;
+            ticketType='sconto del 40%';
         }
         else if(passengerAge == 'middle')
         {
-            console.log('paga peegrin');            
+            console.log('paga peegrin'); 
+            ticketType='Biglietto Standard';
         }
+
+        price= passengerKm * 0.21 * discount;
+
+        document.getElementById('price').innerHTML=price;
+
+
+        //nome passeggero a biglietto
+        document.getElementById('passenger').innerHTML=passengerNameSurname;
+
+        //offerta a biglietto
+        document.getElementById('ticket_type').innerHTML=ticketType;
+
+        //carrozza a biglietto
+        document.getElementById('carrozza').innerHTML=Math.floor(Math.random()* 100) +1;
+
+        //codice CP a biglietto
+        document.getElementById('codice_cp').innerHTML=Math.floor(Math.random()* 100000) +1;
+
+        //prezzo totale a biglietto
+        document.getElementById('total_price').innerHTML='€ '+price.toFixed(2);
+
+
+
+
 
     }
 )
