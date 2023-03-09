@@ -6,7 +6,10 @@
     //se <18 sconto del 20%
     //per tutti il prezzo al km è di 0.21€
 
-const buttonEl = document.getElementById('mybtn');
+const buttonEl = document.getElementById('mybtn_calc');
+const buttonResetEl = document.getElementById('mybtn_reset');
+
+
 let price ;
 let discount = 1 ;
 let ticketType;
@@ -71,6 +74,15 @@ buttonEl.addEventListener(
 
 
 
+    }
+)
+buttonResetEl.addEventListener(
+    'click',
+    function()
+    {
+        document.getElementById('name_surname').value='';
+        document.getElementById('km').value='';
+        document.getElementById('age').value='seleziona la fascia di età';
     }
 )
 
